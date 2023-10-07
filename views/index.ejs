@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke API App</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        /* Add custom CSS for styling */
+        .custom-form {
+            max-width: 400px; /* Adjust the maximum width as needed */
+            margin: 0 auto; /* Center the form horizontally */
+            padding: 20px; /* Add some spacing around the form */
+        }
+       
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke API</title>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold text-body-emphasis">Joke API</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Choose a type of joke and click "Get Joke" to see a funny joke.</p>
+        </div>
+    </div>
+
+    <!-- Joke form -->
+    <div class="container mt-5">
+        <form id="joke-form" action="/joke" method="POST">
+            <div class="mb-3">
+                <label for="joke-type"  class="form-label">Select Joke Type:</label>
+                <select class="form-select" id="joke-type" name="joke-type" required>
+                    <option value="any">Any</option>
+                    <option value="programming">Programming</option>
+                    <option value="miscellaneous">Miscellaneous</option>
+                    <option value="christmas">Christmas</option>
+                    <option value="spooky">Spooky</option>
+                    <option value="dark">Dark</option>
+                    <option value="pun">Pun</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Get Joke</button>
+        </form>
+    </div>
+
+    <div class="container mt-5" id="joke-response">
+        <h1 id="joke-setup"><%= typeof first !== 'undefined' ? first : '' %></h1>
+     <h1 id="joke-delivery"><%= typeof second !== 'undefined' ? second : '' %></h1>
+
+    </div>
+
+   
+</body>
+</html>
